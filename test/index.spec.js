@@ -1,10 +1,10 @@
 const assert = require('assert');
-// const save = require('save');
+const {expect} = require('chai');
 const {sum,multiply,isAdult,isEvenNumber,isOddNumber,isPalindrome,sortArrayUp} = require('../index.js');
 describe('function sum',()=>{
 
     it('should variable a equal 10', ()=>{
-        assert.equal(sum(5,5),10);
+        expect(sum(3,5)).to.equal(8)
     });
 
     it('should function not equals 0', function(){
