@@ -1,0 +1,24 @@
+{
+  "name": "mymocha1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "test",
+    "start": "node.index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YelenaDipon/MyMocha.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/YelenaDipon/MyMocha/issues"
+  },
+  "homepage": "https://github.com/YelenaDipon/MyMocha#readme",
+  "dependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^7.0.0"
+  }
+}
