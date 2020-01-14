@@ -1,39 +1,39 @@
-function sum(a,b) {
+function sum(a, b) {
     return a + b;
 }
 
-function multiply(a,b) {
+function multiply(a, b) {
     return a * b;
 }
 
-function isAdult(age){
-    if(age > 20){
+function isAdult(age) {
+    if (age > 20) {
         return true
-    } else if(age >= 0 && age < 21){
+    } else if (age >= 0 && age < 21) {
         return false
-    } else{
+    } else {
         return undefined;
     }
 }
 
-function isEvenNumber(number){
+function isEvenNumber(number) {
     return number % 2 === 0;
 }
 
-function isOddNumber(numb){
+function isOddNumber(numb) {
     return numb % 2 === 1;
 }
 
-function isPalindrome(word){
+function isPalindrome(word) {
     let result = '';
-    for(let i = word.length - 1 ; i >= 0; i--){
+    for (let i = word.length - 1; i >= 0; i--) {
         result += word[i];
     }
     return result.toLowerCase() === word.toLowerCase();
 }
 
-function sortArrayUp(array){
-    return array.sort((a,b)=>  a - b);
+function sortArrayUp(array) {
+    return array.sort((a, b) => a - b);
 }
 
-module.exports = {sum,multiply,isAdult,isEvenNumber,isOddNumber,isPalindrome,sortArrayUp};
+module.exports = {sum, multiply, isAdult, isEvenNumber, isOddNumber, isPalindrome, sortArrayUp};
