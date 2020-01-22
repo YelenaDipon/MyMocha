@@ -1,5 +1,6 @@
 # What is MyMocha? 
 MyMocha is my repository containing different functions and tests for each function.
+I am using Mocha framework and assertion library Chai together to write my unit tests.
 
 #### Installation
 
@@ -44,3 +45,21 @@ Functions are located in `index.js` file and tests are located in `test` folder 
 This repository will be acquiring new functions often. 
 
 Explanation of each test and functions are and will be indicated in their title/description.
+
+
+#### How to install Node, Mocha, and Chai individually ?
+In case you decide to use Mocha and Chai together, while using your own repository, follow instructions below.
+1) Go to https://nodejs.org/en/ and download Node to your system. To check if Node has been installed successfully, type in `node -v` in your terminal, and a version of an installed Node should display in your terminal.
+2) Install npm to your system. In your terminal type in `npm install` and then press `Enter`. To check if npm has been successfully installed, type in `node -v` in your terminal, and a version of an installed npm should display in your terminal. 
+3) To install Mocha , go to https://mochajs.org/ and follow instructions on their website for installation. On this website you can also find detailed information on how to use this framework. If unable to access, type in `npm install mocha` in your terminal. After, type in `mkdir test` to create a "Test" folder in your repository. 
+ Create an `index.spec.js` file in which you will be writing you tests. 
+5) Make sure to create a `index.js` file in your repository in which you will be writing your function. Use `module.exports = {name of your function1, name of your function2, etc};` , on a vey bottom of your code to export your code to a `index.spec.js` file.  
+4) To intall Chai, in your terminal type in `npm install chai`. 
+6) After everything has been installed, please do the following.
+ In `index.spec.js` file type in the following on a very top to link your tests to your functions which are located in `index.js` :
+ 
+    `const assert = require('assert');`
+                                         
+    `const {expect} = require('chai');`
+                                          
+     `const {name of your function1, name of your function2, etc} = require('../index.js');`
