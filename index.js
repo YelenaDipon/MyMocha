@@ -1,9 +1,14 @@
+const a = 5;
+const b = 3;
+const age = 30;
+const number = a + b;
+
 function sum(a, b) {
   return a + b;
 }
 
 function multiply(a, b) {
-  return (typeof a != 'number' || typeof b != 'number') ?  'Not a number' : a * b;
+  return  a * b;
 }
 
 function isAdult(age) {
