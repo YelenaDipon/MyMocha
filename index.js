@@ -1,8 +1,3 @@
-const a = 5;
-const b = 3;
-const age = 30;
-const number = a + b;
-
 function sum(a, b) {
   return a + b;
 }

@@ -3,93 +3,93 @@ const {expect} = require('chai');
 const {sum, multiply, isAdult, isEvenNumber, isOddNumber, isPalindrome, sortArrayUp} = require('../index.js');
 describe('function sum', () => {
   it('expecting not be undefined' , function(){
-     expect(sum).not.undefined;
-     });
+    expect(sum(5,3)).not.undefined;
+  });
   it('expecting to  equal 8', () => {
-    expect(sum).to.equal(8);
+    expect(sum(5,3)).equal(8);
   });
   it('expecting not equals 0', function () {
-    expect(sum).not.equal(0);
-   });
-  it('expecting to be typeof number' , function(){
-     expect(sum).a('number')
-     });
-    it('expecting to be greater than 10', () => {
-    expect(sum).gte(8);
+    expect(sum(5,3)).not.equal(0);
   });
-    it('expecting to be less than 10', () => {
-    expect(sum).lte(8);
+  it('expecting to be typeof number' , function(){
+    expect(sum(5,3)).a('number');
+  });
+  it('expecting to be greater than 5', () => {
+    expect(sum(5,3)).gte(5);
+  });
+  it('expecting to be less than 10', () => {
+    expect(sum(5,3)).lte(10);
   });
 });
 describe('function multiply', () => {
-   it('expecting to not be undefined' , function(){
-     expect(multiply).not.undefined;
-     });
+  it('expecting to not be undefined' , function(){
+    expect(multiply(5,3)).not.undefined;
+  });
   it('expecting to multiply correctly ', () => {
-    expect(multiply.to.equal(15);
+    expect(multiply(5,3)).to.equal(15);
   });
-    it('expecting to be a number' , function(){
-     expect(multiply).a('number')
-     });
-     it('expecting to be greater than 10', () => {
-    expect(multiply).gte(8);
+  it('expecting to be a number' , function(){
+    expect(multiply(5,3)).a('number');
   });
-    it('expecting to be less than 10', () => {
-    expect(multiply).lte(8);
+  it('expecting to be greater than 5', () => {
+    expect(multiply(5,3)).gte(5);
+  });
+  it('expecting to be less than 20', () => {
+    expect(multiply(5,3)).lte(20);
   });
 });
 describe('function isAdult', () => {
   it('expecting to return true if age is over 20', function () {
-    expect(isAdult.to.equal(true);
+    expect(isAdult(21)).to.equal(true);
   });
-     it('expecting to be a boolean' , function(){
-     expect(isAdult).a('boolean')
-     });
-    it('expecting to not be undefined' , function(){
-     expect(isAdult).not.undefined;
-     });
+  it('expecting to be a boolean' , function(){
+    expect(isAdult(21)).a('boolean');
+  });
+  it('expecting to not be undefined' , function(){
+    expect(isAdult(21)).not.undefined;
+  });
 });
 describe('function isEvenNumber', () => {
   it('expecting to return true for even number', function () {
-  expect(isEvenNumber(20).to.equal(true);
+    expect(isEvenNumber(20)).to.equal(true);
   });
-     it('expecting to be a boolean' , function(){
-     expect(isEvenNumber).a('boolean')
-     });
-    it('expecting to not be undefined' , function(){
-     expect(isEvenNumber).not.undefined;
-     });
+  it('expecting to be a boolean' , function(){
+    expect(isEvenNumber(20)).a('boolean');
+  });
+  it('expecting to not be undefined' , function(){
+    expect(isEvenNumber(20)).not.undefined;
+  });
 });
 describe('function isOddNumber', () => {
   it('expecting to return true for odd number', function () {
-    expect(isOddNumber.to.eqaul(true);
+    expect(isOddNumber(23)).to.equal(true);
   });
-     it('expecting to be a number' , function(){
-     expect(isOddNumber).a('boolean')
-     });
-    it('expecting to not be undefined' , function(){
-     expect(isOddNumber).not.undefined;
-     });
+  it('expecting to be a number' , function(){
+    expect(isOddNumber(23)).a('boolean');
+  });
+  it('expecting to not be undefined' , function(){
+    expect(isOddNumber(23)).not.undefined;
+  });
 });
 describe('function isPalindrome', () => {
   it('expecting to return true if word is Palindrome', function () {
-    assert.equal(isPalindrome('ogo'), true);
+    expect(isPalindrome('ogo')), true;
   });
-   it('expecting to be a boolean' , function(){
-     expect(isPalindrome).a('boolean')
-     });
+  it('expecting to be a boolean' , function(){
+    expect(isPalindrome('ogo')).a('boolean');
+  });
   it('expecting to not be undefined' , function(){
-     expect(isPalindrome).not.undefined;
-     });
+    expect(isPalindrome('ogo')).not.undefined;
+  });
 });
 describe('function sortArrayUp', () => {
   it('expecting to return sorted array from low to high', function () {
-    assert.deepEqual(sortArrayUp([2, 3, 4, 0, 1]), [0, 1, 2, 3, 4]);
+    expect(sortArrayUp([2, 3, 4, 0, 1])).to.deep.equal([0, 1, 2, 3, 4]);
   });
   it('expecting to not be undefined' , function(){
-     expect(sortArrayUp).not.undefined;
-     });
-   it('expecting to be an object' , function(){
-     expect(sortArrayUp).a('object')
-     });
+    expect(sortArrayUp([2, 3, 4, 0, 1]), [0, 1, 2, 3, 4]).not.undefined;
+  });
+  it('expecting to be an object' , function(){
+    expect(sortArrayUp([2, 3, 4, 0, 1])).a('array');
+  });
 });
