@@ -33,7 +33,14 @@ function isPalindrome(word) {
 }
 
 function sortArrayUp(array) {
-  return array.sort((a, b) => a - b);
+  return array.sort((a,b) => a -b);
 }
 
-module.exports = {sum, multiply, isAdult, isEvenNumber, isOddNumber, isPalindrome, sortArrayUp};
+function allNumbers(string){
+  let array = []; let result = [];
+  string.split('').forEach((el) => array.push(Number(el) ));
+  array.map((el)=> (isNaN(el)) ? result.push('NaN') : result.push('number'));
+  return result;
+}
+
+module.exports = {sum, multiply, isAdult, isEvenNumber, isOddNumber, isPalindrome, sortArrayUp,allNumbers};
