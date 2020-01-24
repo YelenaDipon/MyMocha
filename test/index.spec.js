@@ -1,4 +1,5 @@
 // const assert = require('assert');
+
 const {expect} = require('chai');
 const {sum, multiply, isAdult, isEvenNumber, isOddNumber, isPalindrome, sortArrayUp,allNumbers} = require('../index.js');
 describe('function sum', () => {
@@ -97,7 +98,10 @@ describe('function sortArrayUp', () => {
   });
 });
 describe('function allNumbers', () => {
-  it('expecting to not have numbers in a string', function () {
+  it('expecting to only have numbers in a string', function () {
     expect(allNumbers('12345')).not.to.include('NaN');
+  });
+  it('expecting to not be undefined', function () {
+    expect(allNumbers('12345')).not.be.undefined;
   });
 });
