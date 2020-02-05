@@ -1,7 +1,7 @@
 // const assert = require('assert');
 
 const {expect} = require('chai');
-const {sum, multiply, isAdult, isEvenNumber, isOddNumber, isPalindrome, sortArrayUp,allNumbers} = require('../index.js');
+const {sum, multiply, isAdult, isEvenNumber, isOddNumber, isPalindrome, sortArrayUp,allNumbers,usCStates} = require('../index.js');
 describe('function sum', () => {
   it('expecting not be undefined' , function(){
     expect(sum(5,3)).not.undefined;
@@ -103,5 +103,13 @@ describe('function allNumbers', () => {
   });
   it('expecting to not be undefined', function () {
     expect(allNumbers('12345')).not.be.undefined;
+  });
+});
+describe('function USA states that begin with a letter C', function () {
+  it('expecting to not be undefined',function () {
+    expect(usCStates('California,Colorado,Connecticut')).not.be.undefined;
+  });
+  it('expecting to return true if string has 3 states that start with letter C',function () {
+    expect(usCStates('California,Colorado,Connecticut')).to.equal(true);
   });
 });

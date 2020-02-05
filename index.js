@@ -33,7 +33,7 @@ function isPalindrome(word) {
 }
 
 function sortArrayUp(array) {
-  return array.sort((a,b) => a -b);
+  return array.sort((a,b) => a - b);
 }
 
 function allNumbers(string){
@@ -43,4 +43,8 @@ function allNumbers(string){
   return result;
 }
 
-module.exports = {sum, multiply, isAdult, isEvenNumber, isOddNumber, isPalindrome, sortArrayUp,allNumbers};
+function usCStates(string){
+  string = string.split(',');
+  return  string.length === 3 && string.includes('California') && string.includes('Colorado') && string.includes('Connecticut');
+}
+module.exports = {sum, multiply, isAdult, isEvenNumber, isOddNumber, isPalindrome, sortArrayUp,allNumbers,usCStates};
