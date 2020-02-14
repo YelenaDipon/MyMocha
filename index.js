@@ -43,8 +43,8 @@ function allNumbers(string){
   return result;
 }
 
-function usCStates(string){
-  string = string.split(',');
-  return  string.length === 3 && string.includes('California') && string.includes('Colorado') && string.includes('Connecticut');
-}
+function usCStates(threeCStates){
+  threeCStates = threeCStates.split(',').map((el) => el.trim());
+  return  threeCStates.length === 3 && threeCStates.includes('California') && threeCStates.includes('Colorado') && threeCStates.includes('Connecticut');
+});}
 module.exports = {sum, multiply, isAdult, isEvenNumber, isOddNumber, isPalindrome, sortArrayUp,allNumbers,usCStates};
